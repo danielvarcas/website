@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
 export default function Home(): JSX.Element {
   return (
@@ -10,10 +10,8 @@ export default function Home(): JSX.Element {
       </Head>
 
       <main>
-        <h1>
-          Welcome to my website!
-        </h1>
+        <h1>Welcome to my website!</h1>
       </main>
     </div>
-  )
+  );
 }
