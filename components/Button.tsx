@@ -1,6 +1,6 @@
-type Props = {
+interface Props {
   children?: React.ReactNode;
-};
+}
 
 export default function Button({ children }: Props): JSX.Element {
   return (
