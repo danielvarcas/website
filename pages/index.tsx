@@ -17,13 +17,13 @@ export default function Home(): JSX.Element {
         </Link>
       </Navbar>
 
-      <div className="container  mx-auto">
+      <div className="container">
         <main className="text-lg">
           <h1 className="text-9xl">Hello World</h1>
 
           <div className="my-3">
             <p>
-              I&apos;m Daniel. I build high quality, accessible web applications
+              I&apos;m Daniel. I build high-quality, accessible web applications
               using cutting-edge technology.
             </p>
           </div>
