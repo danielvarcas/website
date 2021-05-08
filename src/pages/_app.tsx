@@ -1,11 +1,14 @@
 import type { AppProps } from "next/app";
-import { CssBaseline } from "@material-ui/core";
+import { CssBaseline, ThemeProvider } from "@material-ui/core";
+import { theme } from "../theme";
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
       <CssBaseline />
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }
