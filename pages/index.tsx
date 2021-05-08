@@ -1,36 +1,44 @@
 import Head from "next/head";
-import Link from "next/link";
-import Button from "../components/Button";
-import Navbar from "../components/Navbar";
+import {
+  AppBar,
+  Container,
+  Toolbar,
+  Typography,
+  Button,
+} from "@material-ui/core";
 
 export default function Home(): JSX.Element {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <>
       <Head>
         <title>My Website</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        />
       </Head>
 
-      <Navbar>
-        <Link href="/">
-          <a className="text-xl">Hello World</a>
-        </Link>
-      </Navbar>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6">Dan V</Typography>
+        </Toolbar>
+      </AppBar>
 
-      <div className="container">
-        <main className="text-lg">
-          <h1 className="text-9xl">Hello World</h1>
+      <main>
+        <Container>
+          <Typography variant="h1">Hello World</Typography>
 
-          <div className="my-3">
+          <div>
             <p>
               I&apos;m Daniel. I build high-quality, accessible web applications
               using cutting-edge technology.
             </p>
           </div>
 
-          <Button>Click me</Button>
-        </main>
-      </div>
-    </div>
+          <Button variant="contained">Click me</Button>
+        </Container>
+      </main>
+    </>
   );
 }
