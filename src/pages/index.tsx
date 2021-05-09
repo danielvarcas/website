@@ -24,7 +24,7 @@ export default function Home(): JSX.Element {
   return (
     <>
       <Head>
-        <title>My Website</title>
+        <title>Daniel Varcas</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
