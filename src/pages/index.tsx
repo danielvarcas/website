@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Navbar } from "../components/Navbar";
 import {
   Container,
   Typography,
@@ -32,8 +31,6 @@ export default function Home(): JSX.Element {
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
       </Head>
-
-      <Navbar />
 
       <main className={classes.main}>
         <Container maxWidth="md">
