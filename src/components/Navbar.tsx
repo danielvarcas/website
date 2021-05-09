@@ -44,7 +44,7 @@ export function Navbar({ theme, toggleTheme }: Props): JSX.Element {
         </Link>
 
         <IconButton color="secondary" onClick={toggleTheme}>
-          {theme === "light" ? <Brightness3Icon /> : <Brightness5Icon />}
+          {theme === "dark" ? <Brightness3Icon /> : <Brightness5Icon />}
         </IconButton>
       </Toolbar>
     </AppBar>
