@@ -1,7 +1,7 @@
 import { createMuiTheme } from "@material-ui/core";
 
 const xiketic = "#070614";
-const mediumBlue = "#2e20c9";
+const electricBlue = "#8BF9F5";
 
 export const theme = createMuiTheme({
   palette: {
@@ -9,10 +9,13 @@ export const theme = createMuiTheme({
       main: xiketic,
     },
     secondary: {
-      main: mediumBlue,
+      main: electricBlue,
     },
   },
 });
+
+const mediumBlue = "#2e20c9";
+const celeste = "#9EFAF7";
 
 export const darkTheme = createMuiTheme({
   palette: {
@@ -24,7 +27,7 @@ export const darkTheme = createMuiTheme({
       main: mediumBlue,
     },
     secondary: {
-      main: "#fff",
+      main: celeste,
     },
   },
 });
