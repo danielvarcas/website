@@ -1,19 +1,27 @@
 import Head from "next/head";
-import Link from "next/link";
+import { Navbar } from "../components/Navbar";
 import {
-  AppBar,
   Container,
-  Toolbar,
   Typography,
-  Button,
+  List,
+  ListItem,
+  Grid,
   Box,
-  IconButton,
+  makeStyles,
 } from "@material-ui/core";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import GitHubIcon from "@material-ui/icons/GitHub";
+import Image from "next/image";
+
+const useStyles = makeStyles({
+  circular: {
+    borderRadius: "50%",
+  },
+  main: {
+    padding: "20px 0",
+  },
+});
 
 export default function Home(): JSX.Element {
+  const classes = useStyles();
   return (
     <>
       <Head>
@@ -25,50 +33,82 @@ export default function Home(): JSX.Element {
         />
       </Head>
 
-      <AppBar position="static">
-        <Toolbar>
-          <Box marginRight="auto">
-            <Typography variant="h6">Daniel Varcas</Typography>
-          </Box>
+      <Navbar />
 
-          <Link href="https://twitter.com/dan_j_v" passHref>
-            <IconButton color="secondary" component="a" target="_blank">
-              <TwitterIcon />
-            </IconButton>
-          </Link>
+      <main className={classes.main}>
+        <Container maxWidth="md">
+          <Grid container alignItems="center">
+            <Grid item sm={8}>
+              <Typography variant="h4" component="h1">
+                <span role="img" aria-label="waving">
+                  👋
+                </span>
+                Hi, I&apos;m Daniel. I build high-quality web applications using
+                cutting-edge technology.
+              </Typography>
+            </Grid>
+            <Grid item sm={4}>
+              <Box display="flex" justifyContent="center">
+                <Image
+                  src="/me.jpg"
+                  alt="Me"
+                  width="200px"
+                  height="200px"
+                  className={classes.circular}
+                />
+              </Box>
+            </Grid>
+          </Grid>
 
-          <Link href="https://www.linkedin.com/in/daniel-varcas/" passHref>
-            <IconButton color="secondary" component="a" target="_blank">
-              <LinkedInIcon />
-            </IconButton>
-          </Link>
+          <Typography variant="h2">About Me</Typography>
 
-          <Link href="https://github.com/danielvarcas" passHref>
-            <IconButton color="secondary" component="a" target="_blank">
-              <GitHubIcon />
-            </IconButton>
-          </Link>
-        </Toolbar>
-      </AppBar>
+          <p>
+            A software developer with over two years of commercial experience.
+            I&apos;m particularly passionate about frontend development.
+            Day-to-day you&apos;ll find me building apps with React and
+            TypeScript; writing unit tests in Jest with react-testing-library;
+            creating end-to-end tests using Cypress; and working with designers
+            to build UIs that are user-friendly, beautiful, and accessible.
+          </p>
 
-      <main>
-        <Container>
-          <Typography variant="h1">Hello World</Typography>
+          <p>
+            I also regularly work full-stack, frequenting .NET Core projects,
+            maintaining server infrastructure, and setting up build and release
+            pipelines.
+          </p>
 
-          <div>
-            <p>
-              I&apos;m Daniel. I build high-quality, accessible web applications
-              using cutting-edge technology.
-            </p>
-          </div>
+          <Typography variant="h3">Key Skills</Typography>
 
-          <Button variant="contained" color="primary">
-            Primary
-          </Button>
-
-          <Button variant="contained" color="secondary">
-            Secondary
-          </Button>
+          <Grid container>
+            <Grid item sm={4}>
+              <Typography variant="h4">Frontend</Typography>
+              <List>
+                <ListItem>React</ListItem>
+                <ListItem>TypeScript &amp; JavaScript</ListItem>
+                <ListItem>Jest, react-testing-library</ListItem>
+                <ListItem>Accessibility</ListItem>
+                <ListItem>CSS, SASS, CSS in JS</ListItem>
+              </List>
+            </Grid>
+            <Grid item sm={4}>
+              <Typography variant="h4">Backend</Typography>
+              <List>
+                <ListItem>C#</ListItem>
+                <ListItem>.NET Core</ListItem>
+                <ListItem>Node.js</ListItem>
+                <ListItem>SQL</ListItem>
+              </List>
+            </Grid>
+            <Grid item sm={4}>
+              <Typography variant="h4">Tools</Typography>
+              <List>
+                <ListItem>Build &amp; Release Pipelines</ListItem>
+                <ListItem>AWS &amp; Azure</ListItem>
+                <ListItem>Git</ListItem>
+                <ListItem>Linux</ListItem>
+              </List>
+            </Grid>
+          </Grid>
         </Container>
       </main>
     </>
