@@ -40,9 +40,9 @@ export default function Home(): JSX.Element {
           <Grid container alignItems="center">
             <Grid item sm={8}>
               <Typography variant="h4" component="h1">
-                <span role="img" aria-label="waving">
+                <span role="img" aria-label="hand waving">
                   👋
-                </span>
+                </span>{" "}
                 Hi, I&apos;m Daniel. I build high-quality web applications using
                 cutting-edge technology.
               </Typography>
@@ -81,7 +81,12 @@ export default function Home(): JSX.Element {
 
           <Grid container>
             <Grid item sm={4}>
-              <Typography variant="h4">Frontend</Typography>
+              <Typography variant="h4">
+                <span role="img" aria-label="triangular ruler">
+                  📐
+                </span>{" "}
+                Frontend
+              </Typography>
               <List>
                 <ListItem>React</ListItem>
                 <ListItem>TypeScript &amp; JavaScript</ListItem>
@@ -91,7 +96,12 @@ export default function Home(): JSX.Element {
               </List>
             </Grid>
             <Grid item sm={4}>
-              <Typography variant="h4">Backend</Typography>
+              <Typography variant="h4">
+                <span role="img" aria-label="technologist">
+                  👨‍💻
+                </span>{" "}
+                Backend
+              </Typography>
               <List>
                 <ListItem>C#</ListItem>
                 <ListItem>.NET Core</ListItem>
@@ -100,7 +110,12 @@ export default function Home(): JSX.Element {
               </List>
             </Grid>
             <Grid item sm={4}>
-              <Typography variant="h4">Tools</Typography>
+              <Typography variant="h4">
+                <span role="img" aria-label="gear">
+                  ⚙️
+                </span>{" "}
+                Tools
+              </Typography>
               <List>
                 <ListItem>Build &amp; Release Pipelines</ListItem>
                 <ListItem>AWS &amp; Azure</ListItem>
