@@ -13,3 +13,18 @@ export const theme = createMuiTheme({
     },
   },
 });
+
+export const darkTheme = createMuiTheme({
+  palette: {
+    type: "dark",
+    background: {
+      default: "#000",
+    },
+    primary: {
+      main: mediumBlue,
+    },
+    secondary: {
+      main: "#fff",
+    },
+  },
+});

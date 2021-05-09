@@ -1,14 +1,21 @@
 import type { AppProps } from "next/app";
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
-import { theme } from "../theme";
+import { theme, darkTheme } from "../theme";
 import { Navbar } from "../components/Navbar";
+import { useState } from "react";
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  const [themeMode, setThemeMode] = useState<"light" | "dark">("light");
+
+  function toggleTheme(): void {
+    setThemeMode(themeMode === "light" ? "dark" : "light");
+  }
+
   return (
     <>
-      <CssBaseline />
-      <ThemeProvider theme={theme}>
-        <Navbar />
+      <ThemeProvider theme={themeMode === "light" ? theme : darkTheme}>
+        <CssBaseline />
+        <Navbar theme={themeMode} toggleTheme={toggleTheme} />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
