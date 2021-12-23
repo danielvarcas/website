@@ -25,11 +25,12 @@ export function Navbar({ theme, toggleTheme }: Props): JSX.Element {
           <Typography variant="h6">Daniel Varcas</Typography>
         </Box>
 
-        <Link href="https://twitter.com/dan_j_v" passHref>
+        {/* Commenting this out for now as not using twitter anymore. */}
+        {/* <Link href="https://twitter.com/dan_j_v" passHref>
           <IconButton color="secondary" component="a" target="_blank">
             <TwitterIcon />
           </IconButton>
-        </Link>
+        </Link> */}
 
         <Link href="https://www.linkedin.com/in/daniel-varcas/" passHref>
           <IconButton color="secondary" component="a" target="_blank">
