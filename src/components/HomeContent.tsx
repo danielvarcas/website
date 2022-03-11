@@ -47,8 +47,8 @@ export function HomeContent(): JSX.Element {
             <Grid item sm={4}>
               <Box display="flex" justifyContent="center">
                 <Image
-                  src="/me.jpg"
-                  alt="Me"
+                  src="/me-20220311.jpeg"
+                  alt="A picture of Daniel walking down the street"
                   width="200px"
                   height="200px"
                   className={classes.circular}
